@@ -1,0 +1,20 @@
+<!Doctype html>
+<html>
+<head>
+    <title>Weather</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <input type="text", id = "city-name">
+    <form id = "allUnits" style="display: inline;">
+        <input type="radio" name = "unit" value = "metric" onchange = "changeUnit(this)" checked>Celcius
+        <input type="radio" name = "unit" value= "imperial" onchange = "changeUnit(this)">Fahrenheit
+    </form>
+    <button onclick="getTemp(document.getElementById('city-name'))">Search</button>
+    <button onclick="getTemp(this)" value="cur_loc">Current Location Temp</button>
+    <br>
+    <div id = "temperature"></div>
+    <div id = "icon"></div>
+</body>
+</html>
